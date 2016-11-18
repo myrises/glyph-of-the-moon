@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Glyph Of The Moon</title>
+	<link href="./css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<style id="embed-style">
+	/* --- embedding style in SVG image --- */
+	.glyph-circle {
+		fill: none;
+	}
+	.border {
+		fill: none;
+		stroke: black; 
+	}
+	.border-thick {
+		stroke-width: 4px;
+	}
+	.border-thin {
+		stroke-width: 1px;
+	}
+	.motto {
+		fill: black;
+		font-size: 30px;
+		font-family: "Georgia", "Times New Roman";
+	}
+	.two-moon-axis {
+		fill: none;
+		stroke: yellow;
+		stroke-width: 2px;
+	}
+	#chart-natal,
+	#chart-mirror {
+		stroke-width: 4px;
+	}
+	#marker-circle-natal,
+	#marker-arrow-natal,
+	#marker-circle-mirror,
+	#marker-arrow-mirror {
+		stroke-width: 2px;
+	}
+	#chart-natal,
+	#chart-mirror,
+	#marker-circle-natal,
+	#marker-circle-mirror,
+	#marker-arrow-natal,
+	#marker-arrow-mirror {
+		fill: none;
+	}
+	#chart-natal,
+	#marker-circle-natal,
+	#marker-arrow-natal {
+		stroke: red;
+	}
+	#chart-mirror,
+	#marker-circle-mirror,
+	#marker-arrow-mirror {
+		stroke: #888;
+	}
+	.zring {
+		fill: skyblue;
+		stroke: blue;
+		stroke-width: 2px;
+	}
+	.zlabel {
+		fill: blue;
+		stroke: none;
+	}
+	.pring {
+		fill: blue;
+		stroke: white;
+		stroke-width: 2px;
+		opacity: 0.4;
+	}
+	.plabel {
+		font-size: 24px;
+		fill: white;
+		stroke: none;
+	}
+	</style>
+	<script src="./js/d3-3.1.0/d3.min.js"></script>
+	<script src="./js/canvas-to-blob.js"></script>
+	<script src="./js/uglifycss/uglifycss-lib.js"></script>
+	<h1>The Glyph Of The Moon :: ver. <span id="vers">0.0.0</span></h1>
+	<hr>
+	<div class="container">
+		<div id="input-form" align="left">
+			<form>
+				<fieldset width="300px">
+					<legend> Motto: </legend>
+					<textarea id="motto-data" cols="30" rows="5" maxlength="128"></textarea> 
+				</fieldset>
+				<fieldset width="300px">
+					<legend> Natal positions: </legend>
+					<table id="natal-data" width="100%"></table>
+				</fieldset>
+				<fieldset width="300px">
+					<legend> Options: </legend>
+					<table id="options" width="100%"></table>
+				</fieldset>
+				<br>
+				<button type="button" id="refresh">Refresh Glyph</button>
+				<button type="button" id="export2svg">Save to SVG</button>
+				<button type="button" id="export2png">Save to PNG</button>
+			</form>
+		</div>
+		<div id="glyph">
+			<fieldset>
+				<legend> Glyph </legend>
+				<div id="talisman"></div>
+			</fieldset>
+		</div>
+	</div>
+	<hr>
+	<div id="copyright"><em>&copy; 2016 All right reserved.</em></div>
+	<script src="./js/glyph.js"></script>
+</body>
+</html>
